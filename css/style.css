@@ -3,13 +3,43 @@
 body{
   padding: 0px;
   text-align: center;
+  background-color: #f5f5f2;
 }
 
-.wrapper img{
-  width: 150px;
-  height: 150px;
+.container{
+  background-color: #fff;
+  margin-top: 10px;
 }
 
-.wrapper ol li{
-  list-style: none;
+.wrapper-tracks{
+  margin-top: 20px;
+}
+
+.wrapper-tracks .row{
+  margin-top: 20px;
+  text-align: left;
+}
+
+.wrapper-tracks .row .wrapper-text-track{
+  padding-left: 0;
+}
+
+.wrapper-tracks .row .wrapper-text-track h4{
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: bolder;
+}
+
+.wrapper-tracks .row .wrapper-text-track h5{
+  margin-top: 0;
+}
+
+
+.wrapper-tracks .row img{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+audio {
+ width: 100%;
 }

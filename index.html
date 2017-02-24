@@ -15,17 +15,36 @@
 </head>
 
 <body>
+  <div class="container col-md-4 col-md-offset-4">
 
-  <h1>Spotify Preview</h1>
-  <form>
-    <input type="text" name="search-track" id="search-track" placeholder="Busca una cansión o artista">
-  </form>
-  
-  <div class="wrapper">
-    
+        <h1 class="text-left">Spotify Preview</h1>
+        <form class="form">
+          <input type="text" class="form-control" id="search-track" placeholder="Busca una canción o artista" autofocus="autofocus">
+        </form>
+
+        <div class="wrapper-tracks">
+        </div>
   </div>
-  
 
+  <!--Template handlebars-->
+  <script id="tracks-template" type="text/x-handlebars-template">
+    <div class="wrapper-tracks">
+      {{#each tracks}}
+        <div class="row">
+          <div class="col-md-5">
+            <img src="{{this.urlImageAlbum}}" class="img-responsive" alt="{{this.trackName}}">
+          </div>
+          <div class="col-md-7 wrapper-text-track">
+            <h4>{{this.trackName}}</h4>
+            <h5>{{this.artist}}</h5>
+            <audio controls>
+              <source src="{{this.urlTrackPreview}}">
+            </audio>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </script>
 
   <!--cdn jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 

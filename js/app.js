@@ -28,6 +28,12 @@ function getInputTextSearch (inputSearch){//ajusta espacios con "+" como lo pide
    return inputSearch.val().split(" ").join("+");
 }
 
+function showInfoTracks(data){
+  var template = Handlebars.compile($('#tracks-template').html());
+  $(".wrapper-tracks").replaceWith(template({'tracks':data}));
+}
+
+
 //////////////////////////// events
 
 $("#search-track").keypress(function(e){
@@ -35,24 +41,15 @@ $("#search-track").keypress(function(e){
 
       e.preventDefault();
 
-      var inputTextSearch = getInputTextSearch($("#search-track")); 
+      var inputTextSearch = getInputTextSearch($("#search-track"));
 
       $.ajax({
         url: 'https://api.spotify.com/v1/search?q=' + inputTextSearch + '&type=track',
         dataType: 'json'
       })
       .done(function(jsonTracks) {
-        var resultSearch = selectInfoTracks(jsonTracks);
-        $.each(resultSearch, function(index, track){
-          $(".wrapper").append('<div>' +
-                                  '<ol>'+
-                                       '<li>' + track.artist + '</li>'+
-                                       '<li>' + track.trackName + '</li>'+
-                                       '<li>' + '<img src="' + track.urlImageAlbum + '">' + '</li>' +
-                                       '<li>' + '<a href="' + track.urlTrackPreview + '"> Track Preview </a> </li>'+
-                                  '</ol>' +
-                                '</div>');
-        });
+        var resultSearch = selectInfoTracks(jsonTracks); // objetos con los valores solicitados
+        resultSearch.length > 0 ? showInfoTracks(resultSearch) : alert("Tu canción o artista no se encuentra");
       });
 
     }
