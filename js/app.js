@@ -49,7 +49,11 @@ $("#search-track").keypress(function(e){
       })
       .done(function(jsonTracks) {
         var resultSearch = selectInfoTracks(jsonTracks); // objetos con los valores solicitados
-        resultSearch.length > 0 ? showInfoTracks(resultSearch) : alert("Tu canción o artista no se encuentra");
+        if(resultSearch.length > 0){
+          showInfoTracks(resultSearch)
+        }else{
+          alert("Tu canción o artista no se encuentra");
+        }
       });
 
     }
