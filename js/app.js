@@ -31,8 +31,8 @@ function getInputTextSearch (inputSearch){//ajusta espacios con "+" como lo pide
 function showInfoTracks(data){
   var template = Handlebars.compile($('#tracks-template').html());
   $(".wrapper-tracks").replaceWith(template({'tracks':data}));
+   $(".wrapper-tracks").show(2000);
 }
-
 
 //////////////////////////// events
 
@@ -50,7 +50,7 @@ $("#search-track").keypress(function(e){
       .done(function(jsonTracks) {
         var resultSearch = selectInfoTracks(jsonTracks); // objetos con los valores solicitados
         if(resultSearch.length > 0){
-          showInfoTracks(resultSearch)
+            showInfoTracks(resultSearch);
         }else{
           alert("Tu canción o artista no se encuentra");
         }

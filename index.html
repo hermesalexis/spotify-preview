@@ -4,8 +4,13 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- links css-->
+  
   <!--Cdn Bootstrap css-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- cnd jquery ui-->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet"> 
@@ -18,15 +23,23 @@
 </head>
 
 <body>
+<header>
+  <div class="container-fluid" id="container-brand">
+   <div id="container-name">
+    <h1>Spotify Preview</h1> 
+   </div>
+  </div>
+</header>
   <div class="container col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
 
-        <h1 class="text-center">Spotify Preview</h1>
+        <h2 class="text-center">Search your Song</h2>
         <form class="form">
           <input type="text" class="form-control" id="search-track" placeholder="Busca una canción o artista" autofocus="autofocus">
         </form>
 
         <div class="wrapper-tracks">
         </div>
+
   </div>
 
   <!--Template handlebars-->
@@ -49,8 +62,15 @@
     </div>
   </script>
 
+
+  <!-- links js-->
+
   <!--cdn jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+
+  <!-- cdn jquery ui-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <!--cdn boostrap js-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

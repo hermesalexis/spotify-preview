@@ -11,9 +11,34 @@ body{
   background-size: cover;
 }
 
+#container-brand{
+  height: 70px;
+  background-color: #000;
+  margin-bottom: 30px;
 
+}
 
-h1{
+#container-name{
+  border-style: solid;
+  height: 50px;
+  width: 300px;
+  position: relative;
+  margin-top: 10px;
+  border-color: white;
+  border-radius: 5px;
+  padding: 0;
+}
+
+#container-brand h1{
+  font-family: 'Kavoon', cursive;
+  color: #bf8f00;
+  display: inline-block;
+  padding: 0;
+  margin: auto;
+  left: 0;
+}
+
+h2{
   font-family: 'Kavoon', cursive;
   color: #bf8f00;
   /*opacity: 1;*/
@@ -31,6 +56,7 @@ h1{
 
 .wrapper-tracks{
   margin-top: 20px;
+  display: none;
 }
 
 .wrapper-tracks .row{
@@ -65,3 +91,4 @@ h1{
 audio {
  width: 100%;
 }
+
