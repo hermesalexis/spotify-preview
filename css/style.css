@@ -3,17 +3,30 @@
 body{
   padding: 0px;
   text-align: center;
-  background-color: #f5f5f2;
+  /*background-color: #f5f5f2;*/
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+
 
 h1{
   font-family: 'Kavoon', cursive;
   color: #bf8f00;
+  /*opacity: 1;*/
 }
   
 .container{
-  background-color: #fff;
+  background-color: #000;
   margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  border-radius: 10px;
+  padding-bottom: 10px;
+
 }
 
 .wrapper-tracks{
@@ -25,24 +38,28 @@ h1{
   text-align: left;
 }
 
+
 .wrapper-tracks .row .wrapper-text-track{
   padding-left: 0;
 }
 
 .wrapper-tracks .row .wrapper-text-track h4{
   margin-top: 0;
+  color: #FFF;
   margin-bottom: 3px;
   font-weight: bolder;
 }
 
 .wrapper-tracks .row .wrapper-text-track h5{
   margin-top: 0;
+  color:#FFF;
 }
 
 
 .wrapper-tracks .row img{
   margin-top: auto;
   margin-bottom: auto;
+  border-radius: 5px;
 }
 
 audio {
