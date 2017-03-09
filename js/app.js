@@ -31,7 +31,7 @@ function getInputTextSearch (inputSearch){//ajusta espacios con "+" como lo pide
 function showInfoTracks(data){
   var template = Handlebars.compile($('#tracks-template').html());
   $(".wrapper-tracks").replaceWith(template({'tracks':data}));
-   $(".wrapper-tracks").show(2000);
+   $(".wrapper-tracks").show(1000);
 }
 
 //////////////////////////// events
@@ -56,7 +56,7 @@ $("#search-track").keypress(function(e){
         }
       });
 
-    }
+   }
 
 });
 
